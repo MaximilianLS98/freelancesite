@@ -7,6 +7,7 @@ import { getPayload } from 'payload'
 import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
 import RichText from '@/components/RichText'
+import PreTextDebug from '@/components/customComponents/PreTextDebug'
 
 import type { Post } from '@/payload-types'
 
@@ -68,6 +69,7 @@ export default async function Post({ params: paramsPromise }: Args) {
           />
         )}
       </div>
+      <PreTextDebug data={post} />
     </article>
   )
 }

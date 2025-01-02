@@ -13,6 +13,7 @@ export interface Config {
   collections: {
     pages: Page;
     posts: Post;
+    projects: Project; // Manually added, because the genere:types command does not work right now.
     media: Media;
     categories: Category;
     users: User;
@@ -77,6 +78,69 @@ export interface UserAuthOperations {
     password: string;
   };
 }
+// export interface Project {
+//     docs:          Doc[];
+//     hasNextPage:   boolean;
+//     hasPrevPage:   boolean;
+//     limit:         number;
+//     nextPage:      null;
+//     page:          number;
+//     pagingCounter: number;
+//     prevPage:      null;
+//     totalDocs:     number;
+//     totalPages:    number;
+// }
+
+// ! Manually added, because the genere:types command does not work right now.
+export interface Project {
+    id:          number;
+    title:       string;
+    publishedAt: Date;
+    content:     Content | null;
+    richContent: Content | null;
+    updatedAt:   Date;
+    createdAt:   Date;
+    meta?: {
+      title?: string | null;
+      image?: (string | null) | Media;
+      description?: string | null;
+  };
+}
+
+export interface Content {
+    root: Root;
+}
+
+export interface Root {
+    children:  RootChild[];
+    direction: string;
+    format:    string;
+    indent:    number;
+    type:      string;
+    version:   number;
+}
+
+export interface RootChild {
+    children:   ChildChild[];
+    direction:  string;
+    format:     string;
+    indent:     number;
+    type:       string;
+    version:    number;
+    textFormat: number;
+    textStyle:  string;
+}
+
+export interface ChildChild {
+    detail:  number;
+    format:  number;
+    mode:    string;
+    style:   string;
+    text:    string;
+    type:    string;
+    version: number;
+}
+// ! Manually added, because the genere:types command does not work right now.
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
