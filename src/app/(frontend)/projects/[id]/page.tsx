@@ -46,7 +46,7 @@ export default async function Project({ params: paramsPromise }: Args) {
               </div>
                 <div className="flex flex-col gap-1">
                   <p className="text-sm">Date Published</p>
-                  'Some time'
+                  Some time
                 </div>
             </div>
           </div>

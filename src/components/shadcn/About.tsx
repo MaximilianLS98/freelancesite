@@ -6,7 +6,10 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const About = () => (
-  <section id="om" className="pt-20 bg-brutal-green-500 dark:bg-gray-900 border-b-2 border-x-2 border-black">
+  <section
+    id="om"
+    className="pt-20 bg-brutal-green-500 dark:bg-gray-900 border-b-2 border-x-2 border-black"
+  >
     <div className="container mx-auto px-4">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -23,7 +26,7 @@ const About = () => (
         className="max-w-2xl mx-auto text-center"
       >
         <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
-          Hi, I'm Maximilian Skjønhaug, a passionate freelance web developer and designer with a
+          Hi, I&apos;m Maximilian Skjønhaug, a passionate freelance web developer and designer with a
           keen eye for creating beautiful, functional, and user-friendly websites.
         </p>
         <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">

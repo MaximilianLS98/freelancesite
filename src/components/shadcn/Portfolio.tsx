@@ -35,10 +35,7 @@ type Tprops = {
 const Portfolio = (props: Tprops) => {
   const { projectsPayload } = props
   return (
-    <section
-      id="portefølje"
-      className="h-full bg-background border-black border-b-2 border-x-2"
-    >
+    <section id="portefølje" className="h-full bg-background border-black border-b-2 border-x-2">
       <div className="container md:flex md:flex-row mx-auto">
         <div className="md:w-1/2 md:border-r-2 md:border-black py-20 mx-auto bg-lila-500 px-4">
           <div className="md:sticky md:inset-4">
@@ -51,10 +48,10 @@ const Portfolio = (props: Tprops) => {
               Fremhevede prosjekter
             </motion.h2>
             <p className="text-foreground max-w-md mx-auto">
-              Hi, I'm Maximilian Skjønhaug, a passionate freelance web developer and designer with a
-              keen eye for creating beautiful, functional, and user-friendly websites. With years of
-              experience in the field, I specialize in crafting responsive web applications using
-              modern technologies like React, Next.js, and Tailwind CSS. My goal is to help
+              Hi, I&apos;m Maximilian Skjønhaug, a passionate freelance web developer and designer
+              with a keen eye for creating beautiful, functional, and user-friendly websites. With
+              years of experience in the field, I specialize in crafting responsive web applications
+              using modern technologies like React, Next.js, and Tailwind CSS. My goal is to help
               businesses and individuals bring their digital visions to life through clean code and
               stunning design.
             </p>
