@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { toast } from 'sonner'
 import ContactForm from '@/app/(frontend)/freelance/(components)/ContactForm'
 
+
+// ! Im handling the form in the ContactForm component, lots of unnecessary code here now
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -38,17 +40,17 @@ const Contact = () => {
   }
 
   return (
-    <section id="kontakt" className="py-20 bg-white dark:bg-gray-900">
+    <section id="kontakt" className="py-20 bg-brutal-red-500 dark:bg-gray-900 border-black border-b-2 border-x-2">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white"
+          className="font-bold text-center mb-8 text-gray-800 dark:text-white"
         >
           Ta kontakt med meg
         </motion.h2>
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-md mx-auto">
           <ContactForm />
         </div>
         {/* <motion.div

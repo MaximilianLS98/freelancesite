@@ -17,8 +17,10 @@
   }
 
   :root {
-    --background: 0 0% 100%;
+    /* --background: 0 0% 100%; */
+    --background: 0 0% 96%;
     --foreground: 222.2 84% 4.9%;
+    --background-alt: 0 0% 94%;
 
     --card: 240 5% 96%;
     --card-foreground: 222.2 84% 4.9%;
@@ -50,6 +52,59 @@
     --success: 196 52% 74%;
     --warning: 34 89% 85%;
     --error: 10 100% 86%;
+
+    --color-lila-50: #fbfaff;
+    --color-lila-100: #f7f5ff;
+    --color-lila-200: #eae6fe;
+    --color-lila-300: #e2dcfe;
+    --color-lila-400: #d6cefd;
+    --color-lila-500: #c8befd;
+    --color-lila-600: #b4a6fc;
+    --color-lila-700: #a08dfb;
+    --color-lila-800: #836bfa;
+    --color-lila-900: #5534f9;
+    --color-info-50:  #f2f6fc;
+    --color-info-100: #e1eaf8;
+    --color-info-200: #cadaf3;
+    --color-info-300: #a6c3ea;
+    --color-info-400: #7ca4de;
+    --color-info-500: #5d85d4;
+    --color-info-600: #496bc7;
+    --color-info-700: #3f59b6;
+    --color-info-800: #384a95;
+    --color-info-900: #324076;
+    --color-info-950: #222949;
+    --color-yellow-50: #fffdfa;
+    --color-yellow-100: #fffaf5;
+    --color-yellow-200: #fff5eb;
+    --color-yellow-300: #feeedc;
+    --color-yellow-400: #fee9d2;
+    --color-yellow-500: #fee3c6;
+    --color-yellow-600: #fdc991;
+    --color-yellow-700: #fca446;
+    --color-yellow-800: #ec7c04;
+    --color-yellow-900: #aa5903;
+    --color-green-50: #f8fbfc;
+    --color-green-100: #f2f7f8;
+    --color-green-200: #e1edef;
+    --color-green-300: #d3e5e8;
+    --color-green-400: #c6dde2;
+    --color-green-500: #b7d4da;
+    --color-green-600: #82b5bf;
+    --color-green-700: #51919e;
+    --color-green-800: #366068;
+    --color-green-900: #1c3236;
+    --color-red-50: #fefbfb;
+    --color-red-100: #fdf7f8;
+    --color-red-200: #fbeaed;
+    --color-red-300: #f8dde2;
+    --color-red-400: #f6d0d7;
+    --color-red-500: #f3c4cd;
+    --color-red-600: #eeaab7;
+    --color-red-700: #e88d9d;
+    --color-red-800: #de5e75;
+    --color-red-900: #bf2743;
+    --color-brutal-white: #f5f5f5;
   }
 
   [data-theme='dark'] {
@@ -128,6 +183,12 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply text-7xl lg:text-5xl;
+  }
+  h2 {
+    @apply text-6xl lg:text-4xl;
   }
 }
 

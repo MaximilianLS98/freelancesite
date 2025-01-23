@@ -29,7 +29,7 @@ const PhoneInput: React.ForwardRefExoticComponent<PhoneInputProps> = React.forwa
   return (
     <RPNInput.default
       ref={ref}
-      className={`flex ${className}`}
+      className={`flex bg-brutal-white ${className}`}
       flagComponent={FlagComponent}
       countrySelectComponent={CountrySelect}
       inputComponent={InputComponent}
@@ -52,7 +52,7 @@ PhoneInput.displayName = 'PhoneInput'
 
 const InputComponent = React.forwardRef<HTMLInputElement, React.ComponentProps<'input'>>(
   ({ className, ...props }, ref) => (
-    <Input className={`rounded-e-lg rounded-s-none, ${className}`} {...props} ref={ref} />
+    <Input className={`rounded-e-lg rounded-s-none bg-brutal-white ${className}`} {...props} ref={ref} />
   ),
 )
 InputComponent.displayName = 'InputComponent'
@@ -141,6 +141,7 @@ const FlagComponent = ({ country, countryName }: RPNInput.FlagProps) => {
   const Flag = flags[country]
 
   return (
+    // <span className="flex h-4 w-6 overflow-hidden rounded-sm bg-foreground/20">
     <span className="flex h-4 w-6 overflow-hidden rounded-sm bg-foreground/20">
       {Flag && <Flag title={countryName} />}
     </span>

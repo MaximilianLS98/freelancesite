@@ -21,14 +21,14 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-md">
+    <header className="bg-white dark:bg-gray-800 shadow-md border-2 border-black">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link href="/" className="text-2xl font-bold text-gray-800 dark:text-white">
+          <Link href="/" className="text-5xl sm:text-7xl font-brutal font-bold text-gray-800 dark:text-white">
             Maximilian Skjønhaug
           </Link>
         </motion.div>
@@ -37,7 +37,7 @@ const Header = () => {
             <motion.div key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white text-xl"
               >
                 {item}
               </Link>

@@ -26,14 +26,14 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: {
-        '2xl': '2rem',
-        DEFAULT: '1rem',
-        lg: '2rem',
-        md: '2rem',
-        sm: '1rem',
-        xl: '2rem',
-      },
+      // padding: {
+      //   '2xl': '2rem',
+      //   DEFAULT: '1rem',
+      //   lg: '2rem',
+      //   md: '2rem',
+      //   sm: '1rem',
+      //   xl: '2rem',
+      // },
       screens: {
         '2xl': '86rem',
         lg: '64rem',
@@ -58,6 +58,7 @@ export default {
           foreground: 'hsl(var(--accent-foreground))',
         },
         background: 'hsl(var(--background))',
+        backgroundAlt: 'hsl(var(--background-alt))',
         border: 'hsl(var(--border))',
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -89,10 +90,63 @@ export default {
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',
+
+        lila: {
+          50: 'var(--color-lila-50)',
+          100: 'var(--color-lila-100)',
+          200: 'var(--color-lila-200)',
+          300: 'var(--color-lila-300)',
+          400: 'var(--color-lila-400)',
+          500: 'var(--color-lila-500)',
+          600: 'var(--color-lila-600)',
+          700: 'var(--color-lila-700)',
+          800: 'var(--color-lila-800)',
+          900: 'var(--color-lila-900)',
+        },
+        brutal: {
+          yellow: {
+            50: 'var(--color-yellow-50)',
+            100: 'var(--color-yellow-100)',
+            200: 'var(--color-yellow-200)',
+            300: 'var(--color-yellow-300)',
+            400: 'var(--color-yellow-400)',
+            500: 'var(--color-yellow-500)',
+            600: 'var(--color-yellow-600)',
+            700: 'var(--color-yellow-700)',
+            800: 'var(--color-yellow-800)',
+            900: 'var(--color-yellow-900)',
+          },
+          green: {
+            50: 'var(--color-green-50)',
+            100: 'var(--color-green-100)',
+            200: 'var(--color-green-200)',
+            300: 'var(--color-green-300)',
+            400: 'var(--color-green-400)',
+            500: 'var(--color-green-500)',
+            600: 'var(--color-green-600)',
+            700: 'var(--color-green-700)',
+            800: 'var(--color-green-800)',
+            900: 'var(--color-green-900)',
+          },
+          red: {
+            50: 'var(--color-red-50)',
+            100: 'var(--color-red-100)',
+            200: 'var(--color-red-200)',
+            300: 'var(--color-red-300)',
+            400: 'var(--color-red-400)',
+            500: 'var(--color-red-500)',
+            600: 'var(--color-red-600)',
+            700: 'var(--color-red-700)',
+            800: 'var(--color-red-800)',
+            900: 'var(--color-red-900)',
+          },
+          white: 'var(--color-brutal-white)',
+        },
       },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
         sans: ['var(--font-geist-sans)'],
+        brutal: ['bricolage-groteque'],
       },
       keyframes: {
         'accordion-down': {
@@ -103,6 +157,30 @@ export default {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-slow': 'slide 60s linear infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite alternate',
+      },
+      shadow: {
+        DEFAULT: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+        md: '0 0 20px 0 rgba(0, 0, 0, 0.1)',
+        lg: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
+        xl: '0 0 40px 0 rgba(0, 0, 0, 0.1)',
+        custom: '0px 5px black',
+      },
+      boxShadow: {
+        DEFAULT: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+        md: '0 0 20px 0 rgba(0, 0, 0, 0.1)',
+        lg: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
+        xl: '0 0 40px 0 rgba(0, 0, 0, 0.1)',
+        custom: '0px 5px black',
       },
       typography: ({ theme }) => ({
         DEFAULT: {

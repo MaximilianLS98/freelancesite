@@ -19,12 +19,17 @@ const skills = [
 
 const SkillItem = ({ skill }: { skill: string }) => {
   return (
+    // <motion.div
+    //   className="relative bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 text-center overflow-hidden"
+    //   whileHover={{ scale: 1.05 }}
+    //   transition={{ duration: 0.3 }}
+    // >
     <motion.div
-      className="relative bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 text-center overflow-hidden"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
+      className="relative text-center items-center overflow-hidden text-black shadow-custom shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center  bg-[#f5f5f5] border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white sm:w-auto py-3 rounded-lg h-16 tracking-wide focus:translate-y-1 w-full hover:text-lila-800 gap-3"
+    //   whileHover={{ scale: 1.05 }}
+    //   transition={{ duration: 0.3 }}
     >
-      <motion.div
+      {/* <motion.div
         className="absolute inset-0 opacity-0 hover:opacity-100"
         initial={false}
         animate={{
@@ -37,8 +42,9 @@ const SkillItem = ({ skill }: { skill: string }) => {
           ],
         }}
         transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}
-      />
-      <span className="relative z-10 text-lg font-semibold text-gray-800 dark:text-white">
+      /> */}
+      {/* <span className="relative z-10 text-lg font-semibold text-gray-800 dark:text-white"> */}
+      <span className="relative z-10 text-lg font-semibold">
         {skill}
       </span>
     </motion.div>
@@ -47,13 +53,16 @@ const SkillItem = ({ skill }: { skill: string }) => {
 
 const Skills = () => {
   return (
-    <section id="teknologier" className="py-20 bg-gray-100 dark:bg-gray-800">
+    <section
+      id="teknologier"
+      className="py-20 bg-brutal-yellow-500 dark:bg-gray-800 border-black border-b-2 border-x-2"
+    >
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white"
+          className="font-bold text-center mb-8 text-gray-800 dark:text-white"
         >
           Mine favoritt teknologier
         </motion.h2>
@@ -64,15 +73,15 @@ const Skills = () => {
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
           {skills.map((skill, index) => (
-             <motion.div
-              key={skill}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className='rounded-lg shadow-md'
-            >
-              <SkillItem skill={skill} />
-            </motion.div>
+            //  <motion.div
+            //   key={skill}
+            //   initial={{ opacity: 0, y: 20 }}
+            //   animate={{ opacity: 1, y: 0 }}
+            //   transition={{ duration: 0.5, delay: index * 0.1 }}
+            //   className='rounded-lg shadow-md'
+            // >
+            <SkillItem key={`${index}${skill}`} skill={skill} />
+            // </motion.div>
             /* <motion.div
                   key={skill}
                   initial={{ opacity: 0, y: 20 }}
