@@ -17,21 +17,21 @@ const queryFeaturedProjects = cache(async () => {
 
   const payload = await getPayload({ config: configPromise })
 
-  // const result = await payload.find({
-  //   collection: 'projects',
-  //   draft,
-  //   limit: 3,
-  //   overrideAccess: draft,
-  //   where: {
-  //     featured: {
-  //       equals: true,
-  //     },
-  //   },
-  // })
+  const result = await payload.find({
+    collection: 'projects',
+    draft,
+    limit: 3,
+    overrideAccess: draft,
+    where: {
+      featured: {
+        equals: true,
+      },
+    },
+  })
 
-  const result = {
-    docs: null
-  }
+  // const result = {
+  //   docs: null
+  // }
 
   console.log(result.docs);
   
