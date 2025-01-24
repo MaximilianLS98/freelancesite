@@ -45,7 +45,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-700 rounded-lg shadow-lg shadow-black p-6"
+              className="bg-white dark:bg-gray-700 rounded-lg shadow-custom shadow-black p-6"
             >
               <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
                 {service.title}

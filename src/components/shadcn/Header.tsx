@@ -28,9 +28,9 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link href="/" className="text-5xl sm:text-7xl font-brutal font-bold text-gray-800 dark:text-white">
+          {/* <Link href="/" className="text-5xl sm:text-7xl font-brutal font-bold text-gray-800 dark:text-white">
             Maximilian Skjønhaug
-          </Link>
+          </Link> */}
         </motion.div>
         <nav className="hidden md:flex space-x-4">
           {['Om', 'Teknologier', 'Portefølje', 'Tjenester', 'Kontakt'].map((item) => (
