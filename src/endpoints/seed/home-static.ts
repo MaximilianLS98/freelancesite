@@ -84,7 +84,7 @@ export const homeStatic: Page = {
     title: 'Payload Website Template',
   },
   title: 'Home',
-  id: '',
+  id: '' as any,
   layout: [],
   updatedAt: '',
   createdAt: '',
