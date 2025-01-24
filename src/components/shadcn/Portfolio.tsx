@@ -81,7 +81,7 @@ const Portfolio = (props: Tprops) => {
         </div>
         <div className="md:w-1/2 py-20 px-4 bg-white dark:bg-slate-950">
           <div className="grid grid-cols-1 gap-8 mx-auto max-w-md">
-            {projectsPayload.map((project, index) => (
+            {projectsPayload.map((project: any, index: number) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
