@@ -47,7 +47,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   const SheetComponent = (
     <Sheet>
       <SheetTrigger className='absolute left-5 top-5'>
-        <ArrowRight className="w-5 text-primary" />
+        <ArrowRight className="w-5 text-foreground" />
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>
