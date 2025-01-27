@@ -21,7 +21,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl mb-8"
         >
-          Freelance Fullstack typescript utvikler
+          Fullstack utvikler
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

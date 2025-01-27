@@ -104,7 +104,7 @@ const Portfolio = (props: Tprops) => {
                 </div>
                 <div className="h-20">
                   <div className="absolute bottom-4 right-4">
-                    <Link href={`/projects/${project.id}`} className="inline-block px-4 py-2">
+                    <Link href={`/projects/${project.id}`} className="inline-block px-4 py-2 hover:text-lila-700">
                       Les mer
                     </Link>
                   </div>
