@@ -28,7 +28,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="tjenester" className="py-20 bg-gray-100 dark:bg-gray-800 border-black border-b-2 border-x-2">
+    <section
+      id="tjenester"
+      className="py-20 bg-gray-100 dark:bg-gray-800 border-black border-b-2 border-x-2"
+    >
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -42,10 +45,11 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
+              whileHover={{ scale: 1.05, backgroundColor: '#b7d4da' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-700 rounded-lg shadow-custom shadow-black p-6"
+              className="bg-white dark:bg-gray-700 rounded-lg shadow-custom shadow-black p-6 border-2 border-black"
             >
               <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
                 {service.title}
