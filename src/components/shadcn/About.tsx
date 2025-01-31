@@ -26,16 +26,16 @@ const About = () => (
         className="max-w-2xl mx-auto text-center"
       >
         <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
-          Hi, I&apos;m Maximilian Skjønhaug, a passionate freelance web developer and designer with a
-          keen eye for creating beautiful, functional, and user-friendly websites.
+          En allsidig fullstack-utvikler med fire års erfaring fra egen virksomhet og
+          konsulentroller, for alt fra startups til større selskaper som Norgesgruppen.
         </p>
         <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
-          With years of experience in the field, I specialize in crafting responsive web
-          applications using modern technologies like React, Next.js, and Tailwind CSS.
+          Med solid kompetanse i teknologier som TypeScript, Next.js, React, Node.js og PostgreSQL,
+          har jeg levert helhetlige løsninger innen helse, transport og medlemsorganisasjoner.
         </p>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          My goal is to help businesses and individuals bring their digital visions to life through
-          clean code and stunning design.
+          Jeg trives med å se helheten i systemarkitektur og sikre at alle deler fungerer sømløst
+          sammen.
         </p>
       </motion.div>
       <motion.div

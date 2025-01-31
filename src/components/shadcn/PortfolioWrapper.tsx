@@ -33,7 +33,7 @@ const queryFeaturedProjects = cache(async () => {
   //   docs: null
   // }
 
-  console.log(result.docs);
+  // console.log(result.docs);
   
 
   return result.docs || null

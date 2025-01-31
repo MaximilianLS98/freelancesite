@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/card'
 import Link from 'next/link'
 import PreTextDebug from '@/components/customComponents/PreTextDebug'
+import { Button } from '@/components/ui/button'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -37,14 +38,14 @@ export default async function Page() {
       <PageClient />
       <div className="container mb-16">
         <div className="prose dark:prose-invert max-w-none">
-          <h1>Projects</h1>
+          <h1>Prosjekter</h1>
         </div>
       </div>
 
-      <div className="container mb-8">
+      <div className="container mb-8 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.docs.map((project) => (
-            <Card key={project.id}>
+            <Card key={project.id} className="shadow-custom bg-brutal-green-500 border-2 border-black">
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>
@@ -53,7 +54,12 @@ export default async function Page() {
               </CardContent>
               <CardFooter>
                 {/* A link to the project at /projects/{id} */}
-                <Link href={`/projects/${project.id}`}>Les mer</Link>
+                <Link
+                  href={`/projects/${project.id}`}
+                  className="text-black text-sm items-center shadow-custom shadow-lila-600 font-semibold inline-flex px-2 focus:outline-none justify-center text-center bg-lila-300 focus:bg-lila-600 border-lila-600 duration-300 outline-none focus:shadow-none border-2 sm:w-auto py-3 rounded-lg h-12 tracking-wide focus:translate-y-1 w-full hover:bg-lila-500"
+                >
+                  Les mer
+                </Link>
               </CardFooter>
             </Card>
           ))}

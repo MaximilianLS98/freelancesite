@@ -7,16 +7,22 @@ import { useTheme } from 'next-themes'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const {theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    // get the theme from the data-theme attribute on the html element
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    if (currentTheme) {
+      setTheme(currentTheme)
+    }
+    setMounted(true)}, [])
 
   const toggleTheme = () => {
     if (mounted) {
       setTheme(theme === 'light' ? 'dark' : 'light')
       // also set the data-theme attribute on the html element
-        document.documentElement.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light')
+      document.documentElement.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light')
     }
   }
 

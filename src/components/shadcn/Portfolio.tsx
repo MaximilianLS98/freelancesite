@@ -48,12 +48,7 @@ const Portfolio = (props: Tprops) => {
               Fremhevede prosjekter
             </motion.h2>
             <p className="text-foreground max-w-md mx-auto">
-              Hi, I&apos;m Maximilian Skjønhaug, a passionate freelance web developer and designer
-              with a keen eye for creating beautiful, functional, and user-friendly websites. With
-              years of experience in the field, I specialize in crafting responsive web applications
-              using modern technologies like React, Next.js, and Tailwind CSS. My goal is to help
-              businesses and individuals bring their digital visions to life through clean code and
-              stunning design.
+              Gjennom fire år som fullstack utvikler har jeg jobbet med en rekke spennende prosjekter, i ulike bransjer og med ulike teknologier. Her er noen av prosjektene jeg er mest stolt av, eller synes var mest spennende.
             </p>
             <div className="text-center mt-8">
               {/* <motion.a
@@ -86,7 +81,7 @@ const Portfolio = (props: Tprops) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden relative"
+                className="bg-brutal-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden relative border-2 border-black"
               >
                 <Image
                   // src={project.image}
@@ -104,7 +99,7 @@ const Portfolio = (props: Tprops) => {
                 </div>
                 <div className="h-20">
                   <div className="absolute bottom-4 right-4">
-                    <Link href={`/projects/${project.id}`} className="inline-block px-4 py-2">
+                    <Link href={`/projects/${project.id}`} className="rounded-lg border-2 border-transparent inline-block px-4 py-2 hover:bg-lila-500 hover:border-2 hover:border-black hover:shadow-custom">
                       Les mer
                     </Link>
                   </div>

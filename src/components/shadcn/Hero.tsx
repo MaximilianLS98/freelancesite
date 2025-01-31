@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   return (
     // <section className="bg-gray-900 dark:bg-gray-800 text-white py-20 border-b-2 border-x-2 border-black">
-    <section className="bg-brutal-red-500 dark:bg-gray-800 text-white py-20 border-b-2 border-x-2 border-black">
+    <section className="bg-brutal-red-500 dark:bg-gray-800 py-20 border-b-2 border-x-2 border-black">
       <div className="container mx-auto px-4 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -21,7 +21,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl mb-8"
         >
-          Freelance Fullstack typescript utvikler
+          Fullstack utvikler
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

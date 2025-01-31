@@ -9,6 +9,12 @@ import Contact from '@/components/shadcn/Contact'
 import Footer from '@/components/shadcn/Footer'
 import { SlidingLogoBanner } from '@/components/shadcn/SlidingTechBanner'
 
+export const metadata = {
+  title: 'Freelance og CV side',
+  description: 'A personal freelance website showcasing skills, portfolio, and services.',
+  keywords: ['freelance', 'portfolio', 'tjenester', 'ferdigheter', 'kontakt', 'fullstack', 'webutvikler', 'webdesigner'],
+  author: 'Maximilian Skjønhaug',
+}
 
 export default function Page() {
   return (

@@ -63,6 +63,7 @@
     --color-lila-700: #a08dfb;
     --color-lila-800: #836bfa;
     --color-lila-900: #5534f9;
+    --color-lila-950: #222949;
     --color-info-50:  #f2f6fc;
     --color-info-100: #e1eaf8;
     --color-info-200: #cadaf3;
@@ -148,6 +149,8 @@
     --success: 196 100% 14%;
     --warning: 34 51% 25%;
     --error: 10 39% 43%;
+
+    --color-lila-500: #222949;
   }
 
   [data-theme='dark']
@@ -183,6 +186,8 @@
     --success: 196 100% 14%;
     --warning: 34 51% 25%;
     --error: 10 39% 43%;
+
+    --color-lila-500: #222949;
   }
   .dark {
     --sidebar-background: 240 5.9% 10%;

@@ -41,20 +41,42 @@ export default function ContactForm() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values)
-      toast.success(
-        <div className="flex flex-row flex-wrap">
-          <h1 className="text-lg w-full">Message sent succesfully</h1>
-          {/* <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4"> */}
-          <pre className="my-2 rounded-md bg-slate-950 p-4">
-            <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-          </pre>
-        </div>,
-      );
-      form.reset()
+      // console.log(values)
+      const response = fetch('/api/resend', {method: 'POST', body: JSON.stringify(values), headers: { 'Content-Type': 'application/json' }})
+        .then((response) => {
+          console.log('response', response)
+          if (!response.ok) {
+            console.log('Failed to submit the form. response.ok is false');
+            toast.error('Failed to submit the form. Please try again.')
+            throw new Error('Failed to submit the form. Please try again.')
+          } else {
+            console.log('Message sent succesfully, does the toast work?');
+            toast.success('Meldingen din er sendt, takk for at du tok kontakt!')
+            form.reset()
+          }
+          return response
+        })
+      .then((data) => {
+        console.log('data', data)
+      })
+
+    //   if (!response.ok) {
+    //     console.log('Failed to submit the form. response.ok is false');
+    //     throw new Error('Failed to submit the form. Please try again.')
+    //   } else {
+    //    toast.success(
+    //     <div className="flex flex-row flex-wrap">
+    //       <h1 className="text-lg w-full">Message sent succesfully</h1>
+    //       {/* <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4"> */}
+    //       <pre className="my-2 rounded-md bg-slate-950 p-4">
+    //         <code className="text-white">{JSON.stringify(values, null, 2)}</code>
+    //       </pre>
+    //     </div>,
+    //   );
+    // }
     } catch (error) {
       console.error('Form submission error', error)
-      toast.error('Failed to submit the form. Please try again.')
+      toast.error('Noe gikk galt, prøv igjen, eller send mail direkte til maximilian@kaktusfamilien.no')
     }
   }
 

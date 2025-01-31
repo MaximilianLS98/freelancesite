@@ -37,7 +37,7 @@ export default async function Project({ params: paramsPromise }: Args) {
   return (
     <>
       <div className="relative -mt-[10.4rem] flex items-end">
-        <div className="container z-10 relative lg:grid lg:grid-cols-[1fr_48rem_1fr] text-white pb-8">
+        <div className="container z-10 relative lg:grid lg:grid-cols-[1fr_48rem_1fr] text-white pb-8 px-2">
           <div className="col-start-1 col-span-1 md:col-start-2 md:col-span-2">
             <div className="uppercase text-sm mb-6"></div>
 
@@ -69,12 +69,13 @@ export default async function Project({ params: paramsPromise }: Args) {
           <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent" />
         </div>
       </div>
-      <div className="py-16">
+      <div className="py-16 px-4">
         <PageClient />
         <div className="flex flex-col items-center gap-4 pt-8">
-          <div className="container lg:mx-0 lg:grid lg:grid-cols-[1fr_48rem_1fr] grid-rows-[1fr]">
+          {/* <div className="container lg:mx-0 lg:grid lg:grid-cols-[1fr_48rem_1fr] grid-rows-[1fr]"> */}
+          <div className="container">
             <RichText
-              className="lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[1fr]"
+              className=""
             //   content={typeof project.richContent === 'string' ? project.richContent : ''}
               data={project.richContent}
               enableGutter={false}
