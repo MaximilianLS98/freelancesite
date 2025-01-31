@@ -27,7 +27,7 @@ const About = () => (
       >
         <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
           En allsidig fullstack-utvikler med fire års erfaring fra egen virksomhet og
-          konsulentroller for alt fra startups til større selskaper som Norgesgruppen.
+          konsulentroller, for alt fra startups til større selskaper som Norgesgruppen.
         </p>
         <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
           Med solid kompetanse i teknologier som TypeScript, Next.js, React, Node.js og PostgreSQL,
