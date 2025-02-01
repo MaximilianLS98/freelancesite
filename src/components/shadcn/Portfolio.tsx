@@ -84,8 +84,8 @@ const Portfolio = (props: Tprops) => {
                 className="bg-brutal-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden relative border-2 border-black"
               >
                 <Image
-                  // src={project.image}
-                  src={'/placeholder.jpg?height=300&width=400'}
+                  src={project.meta.image ? project.meta.image.sizes.small.url : '/placeholder.jpg?height=300&width=400'}
+                  // src={'/placeholder.jpg?height=300&width=400'}
                   alt={project.title}
                   width={400}
                   height={300}

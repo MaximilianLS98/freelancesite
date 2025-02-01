@@ -1,10 +1,6 @@
 import type { Metadata } from 'next/types'
 
 import React, { cache } from 'react'
-import { draftMode } from 'next/headers'
-import { CollectionArchive } from '@/components/CollectionArchive'
-import { PageRange } from '@/components/PageRange'
-import { Pagination } from '@/components/Pagination'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import PageClient from './page.client'
@@ -18,7 +14,7 @@ import {
 } from '@/components/ui/card'
 import Link from 'next/link'
 import PreTextDebug from '@/components/customComponents/PreTextDebug'
-import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -44,8 +40,24 @@ export default async function Page() {
 
       <div className="container mb-8 px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.docs.map((project) => (
-            <Card key={project.id} className="shadow-custom bg-brutal-green-500 border-2 border-black">
+          {projects.docs.map((project: any) => (
+            <Card
+              key={project.id}
+              className="shadow-custom bg-brutal-green-500 border-2 border-black"
+            >
+              <div className='min-w-full'>
+                <Image
+                  src={
+                    project.meta?.image
+                      ? project.meta.image.sizes.small.url
+                      : '/placeholder.jpg?height=300&width=400'
+                  }
+                  alt={project.title}
+                  width={400}
+                  height={300}
+                  className='w-full h-48 object-cover'
+                />
+              </div>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>
