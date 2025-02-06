@@ -1,14 +1,22 @@
-# Payload Website Template
+# Maximilian Skjønhaug - Portfolio and personal website
 
-This is the official [Payload Website Template](https://github.com/payloadcms/payload/blob/main/templates/website). Use it to power websites, blogs, or portfolios from small to enterprise. This repo includes a fully-working backend, enterprise-grade admin panel, and a beautifully designed, production-ready website.
+## Technologies Used
 
-This template is right for you if you are working on:
+This project leverages a variety of modern technologies to deliver a robust and scalable solution:
 
-- A personal or enterprise-grade website, blog, or portfolio
-- A content publishing platform with a fully featured publication workflow
-- Exploring the capabilities of Payload
+- **Next.js**: A React framework for building server-side rendered and statically generated web applications.
+- **TypeScript**: A statically typed superset of JavaScript that enhances code quality and developer productivity.
+- **React Hook Form**: A library for managing form state and validation in React applications.
+- **TailwindCSS**: A utility-first CSS framework for rapidly building custom user interfaces.
+- **shadcn/ui**: A collection of reusable UI components built with TailwindCSS.
+- **Payload CMS**: A headless CMS that provides a powerful and flexible content management system.
+- **PostgreSQL**: A powerful, open-source relational database system. Through [supabase](https://supabase.io), it provides a simple and secure way to build modern applications.
+- **Docker**: A platform for developing, shipping, and running applications in containers.
+- **Vercel**: A cloud platform for static sites and serverless functions that enables developers to host websites and web applications.
 
-Core features:
+These technologies work together to create a seamless development experience and a performant, scalable application.
+
+Core features of my choice of CMS, Payload, include:
 
 - [Pre-configured Payload Config](#how-it-works)
 - [Authentication](#users-authentication)
@@ -27,35 +35,11 @@ Core features:
 
 To spin up this example locally, follow these steps:
 
-### Clone
-
-If you have not done so already, you need to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
-
-#### Method 1 (recommended)
-
-Go to Payload Cloud and [clone this template](https://payloadcms.com/new/clone/website). This will create a new repository on your GitHub account with this template's code which you can then clone to your own machine.
-
-#### Method 2
-
-Use the `create-payload-app` CLI to clone this template directly to your machine:
-
-```bash
-pnpx create-payload-app my-project -t website
-```
-
-#### Method 3
-
-Use the `git` CLI to clone this template directly to your machine:
-
-```bash
-git clone -n --depth=1 --filter=tree:0 https://github.com/payloadcms/payload my-project && cd my-project && git sparse-checkout set --no-cone templates/website && git checkout && rm -rf .git && git init && git add . && git mv -f templates/website/{.,}* . && git add . && git commit -m "Initial commit"
-```
-
 ### Development
 
 1. First [clone the repo](#clone) if you have not done so already
 1. `cd my-project && cp .env.example .env` to copy the example environment variables
-1. `pnpm install && pnpm dev` to install dependencies and start the dev server
+1. `npm install && npm dev` to install dependencies and start the dev server
 1. open `http://localhost:3000` to open the app in your browser
 
 That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
@@ -97,10 +81,12 @@ See the [Globals](https://payloadcms.com/docs/configuration/globals) docs for de
 - `Header`
 
   The data required by the header on your front-end like nav links.
+  note: I have chosen to hide this, and create a custom header component instead.
 
 - `Footer`
 
   Same as above but for the footer of your site.
+  note: I have chosen to hide this, and create a custom footer component instead.
 
 ## Access control
 
@@ -163,28 +149,6 @@ If you are migrating an existing site or moving content to a new URL, you can us
 We have configured [Scheduled Publish](https://payloadcms.com/docs/versions/drafts#scheduled-publish) which uses the [jobs queue](https://payloadcms.com/docs/jobs-queue/jobs) in order to publish or unpublish your content on a scheduled time. The tasks are run on a cron schedule and can also be run as a separate instance if needed.
 
 > Note: When deployed on Vercel, depending on the plan tier, you may be limited to daily cron only.
-
-## Website
-
-This template includes a beautifully designed, production-ready front-end built with the [Next.js App Router](https://nextjs.org), served right alongside your Payload app in a instance. This makes it so that you can deploy both your backend and website where you need it.
-
-Core features:
-
-- [Next.js App Router](https://nextjs.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [React Hook Form](https://react-hook-form.com)
-- [Payload Admin Bar](https://github.com/payloadcms/payload-admin-bar)
-- [TailwindCSS styling](https://tailwindcss.com/)
-- [shadcn/ui components](https://ui.shadcn.com/)
-- User Accounts and Authentication
-- Fully featured blog
-- Publication workflow
-- Dark mode
-- Pre-made layout building blocks
-- SEO
-- Search
-- Redirects
-- Live preview
 
 ### Cache
 
@@ -256,10 +220,6 @@ To run Payload in production, you need to build and start the Admin panel. To do
 1. Finally run `pnpm start` or `npm run start` to run Node in production and serve Payload from the `.build` directory.
 1. When you're ready to go live, see Deployment below for more details.
 
-### Deploying to Payload Cloud
-
-The easiest way to deploy your project is to use [Payload Cloud](https://payloadcms.com/new/import), a one-click hosting solution to deploy production-ready instances of your Payload apps directly from your GitHub repo.
-
 ### Deploying to Vercel
 
 This template can also be deployed to Vercel for free. You can get started by choosing the Vercel DB adapter during the setup of the template or by manually installing and configuring it:
@@ -318,4 +278,4 @@ You can also deploy your app manually, check out the [deployment documentation](
 
 ## Questions
 
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+If you have any issues or questions, reach out to me on [email](mailto:maximilian+githubrepo@kaktusfamilien.no) 
