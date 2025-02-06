@@ -64,19 +64,19 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
               return <CMSLink key={i} {...link} appearance="link" />
             })}
           <Link href="/posts">
-            <span className="sr-only">Posts</span>
-            <span className="hover:underline">Posts</span>
+            <span className="sr-only">Innlegg</span>
+            <span className="hover:underline">Innlegg</span>
           </Link>
           <Link href="/projects">
-            <span className="sr-only">Projects</span>
-            <span className="hover:underline">Projects</span>
+            <span className="sr-only">Prosjekter</span>
+            <span className="hover:underline">Prosjekter</span>
           </Link>
           <Link href="/freelance">
             <span className="sr-only">Freelance</span>
             <span className="hover:underline">Freelance</span>
           </Link>
           <Link href="/search">
-            <span className="sr-only">Search</span>
+            <span className="sr-only">Søk</span>
             <SearchIcon className="w-5 text-primary" />
           </Link>
         </nav>

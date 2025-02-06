@@ -22,9 +22,9 @@ export async function POST(NextRequest: NextRequest) {
     
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Kontaktskjema <maximilian@kaktusfamilien.com>',
       //   to: ['maximilian@kaktusfamilien.no'],
-      to: ['delivered@resend.dev'],
+      to: ['maximilian@kaktusfamilien.no'],
       subject: 'Ny henvendelse',
       react: await EmailTemplate({ email, phone, typeOfRequest, message }),
     })
@@ -44,7 +44,7 @@ export async function GET() {
     const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['delivered@resend.dev'],
-      subject: 'Tester kontaktskjema',
+      subject: 'Noen prøvde å gjøre en GET request til /api/resend',
       react: await EmailTemplate({...dummyTemplateData}),
     })
 
