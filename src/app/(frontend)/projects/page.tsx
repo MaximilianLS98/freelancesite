@@ -39,7 +39,7 @@ export default async function Page() {
       </div>
 
       <div className="container mb-8 px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {projects.docs.map((project: any) => (
             <Card
               key={project.id}
@@ -62,7 +62,7 @@ export default async function Page() {
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>ID of project: {project.id}</CardDescription>
+                <CardDescription>Liten beskrivelse her</CardDescription>
               </CardContent>
               <CardFooter>
                 {/* A link to the project at /projects/{id} */}
