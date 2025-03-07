@@ -9,8 +9,8 @@ export const apiaccess: hasapiaccess = ({ req: { user } }) => {
         return false
     }
     // THis is not safe code, but using it for now. 
-    if (user.apiKey) {
-        return true
-    }
+    // if (user.apiKey) {
+    //     return true
+    // }
     return false
 }
