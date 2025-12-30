@@ -9,19 +9,19 @@ const projects = [
   {
     id: 1,
     title: 'E-commerce Website',
-    image: '/placeholder.jpg?height=300&width=400',
+    image: '/placeholder.jpg',
     description: 'A fully functional e-commerce platform built with Next.js and Stripe.',
   },
   {
     id: 2,
     title: 'Blog Application',
-    image: '/placeholder.jpg?height=300&width=400',
+    image: '/placeholder.jpg',
     description: 'A responsive blog application with a custom CMS using React and Node.js.',
   },
   {
     id: 3,
     title: 'Portfolio Website',
-    image: '/placeholder.jpg?height=300&width=400',
+    image: '/placeholder.jpg',
     description:
       'A sleek portfolio website for a professional photographer using Gatsby and GraphQL.',
   },
@@ -31,9 +31,13 @@ type Tprops = {
   projectsPayload: any
 }
 
+
 const Portfolio = (props: Tprops) => {
   // const { projectsPayload } = props
   const projectsPayload = props.projectsPayload ? props.projectsPayload : projects
+  const imageSourcePortfolio = projectsPayload.meta?.image ? projectsPayload.meta.image.sizes.small.url : '/placeholder.jpg'
+
+  
   return (
     <section id="portefølje" className="h-full bg-background border-black border-b-2 border-x-2">
       <div className="container md:flex md:flex-row mx-auto">
@@ -84,7 +88,7 @@ const Portfolio = (props: Tprops) => {
                 className="bg-brutal-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden relative border-2 border-black"
               >
                 <Image
-                  src={project.meta.image ? project.meta.image.sizes.small.url : '/placeholder.jpg?height=300&width=400'}
+                  src={imageSourcePortfolio}
                   // src={'/placeholder.jpg?height=300&width=400'}
                   alt={project.title}
                   width={400}

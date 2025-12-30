@@ -1,5 +1,6 @@
 import React, { cache } from 'react'
 import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
 import configPromise from '@payload-config'
 import RichText from '@/components/RichText'
@@ -22,14 +23,9 @@ export default async function Project({ params: paramsPromise }: Args) {
   const url = '/projects/' + id
   const project = await queryProjectById({ id })
 
-  // If project, project.title or project.richContent is undefined, redirect to 404
+  // If project, project.title or project.richContent is undefined, show 404
   if (!project || !project?.title || !project?.richContent) {
-    return {
-      redirect: {
-        destination: '/404',
-        permanent: false,
-      },
-    }
+    notFound()
   }
 
   const metaImage = project.meta?.image || null
@@ -64,7 +60,7 @@ export default async function Project({ params: paramsPromise }: Args) {
             <Media fill imgClassName="-z-10 object-cover" resource={metaImage} />
           )}
           {!metaImage && (
-            <Image src={Placeholder} alt="Placeholder" layout="fill" objectFit="cover" />
+            <Image src={Placeholder} alt="Placeholder" fill className="object-cover" />
           )}
           <div className="absolute pointer-events-none left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent" />
         </div>

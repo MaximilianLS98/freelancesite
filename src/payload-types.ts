@@ -14,7 +14,7 @@ export interface Config {
     pages: Page;
     posts: Post;
     projects: Project;
-    media: Media | string;
+    media: Media;
     categories: Category;
     users: User;
     redirects: Redirect;
@@ -135,7 +135,7 @@ export interface Page {
           id?: string | null;
         }[]
       | null;
-    media?: (number | null) | Media | string;
+    media?: (number | null) | Media;
   };
   layout: (CallToActionBlock | ContentBlock | MediaBlock | ArchiveBlock | FormBlock)[];
   meta?: {
@@ -143,7 +143,7 @@ export interface Page {
     /**
      * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
      */
-    image?: (number | null) | Media | string;
+    image?: (number | null) | Media;
     description?: string | null;
   };
   publishedAt?: string | null;
@@ -160,7 +160,7 @@ export interface Page {
 export interface Post {
   id: number;
   title: string;
-  heroImage?: (number | null) | Media | string;
+  heroImage?: (number | null) | Media;
   content: {
     root: {
       type: string;
@@ -183,7 +183,7 @@ export interface Post {
     /**
      * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
      */
-    image?: (number | null) | Media | string;
+    image?: (number | null) | Media;
     description?: string | null;
   };
   publishedAt?: string | null;
@@ -322,6 +322,9 @@ export interface User {
   name?: string | null;
   updatedAt: string;
   createdAt: string;
+  enableAPIKey?: boolean | null;
+  apiKey?: string | null;
+  apiKeyIndex?: string | null;
   email: string;
   resetPasswordToken?: string | null;
   resetPasswordExpiration?: string | null;
@@ -434,7 +437,7 @@ export interface ContentBlock {
  * via the `definition` "MediaBlock".
  */
 export interface MediaBlock {
-  media: number | Media | string;
+  media: number | Media;
   id?: string | null;
   blockName?: string | null;
   blockType: 'mediaBlock';
@@ -700,7 +703,7 @@ export interface Project {
     /**
      * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
      */
-    image?: (number | null) | Media | string;
+    image?: (number | null) | Media;
     description?: string | null;
   };
   publishedAt?: string | null;
@@ -786,7 +789,7 @@ export interface Search {
   meta?: {
     title?: string | null;
     description?: string | null;
-    image?: (number | null) | Media | string;
+    image?: (number | null) | Media;
   };
   categories?:
     | {
@@ -911,7 +914,7 @@ export interface PayloadLockedDocument {
       } | null)
     | ({
         relationTo: 'media';
-        value: number | Media | string;
+        value: number | Media;
       } | null)
     | ({
         relationTo: 'categories';
@@ -1293,6 +1296,9 @@ export interface UsersSelect<T extends boolean = true> {
   name?: T;
   updatedAt?: T;
   createdAt?: T;
+  enableAPIKey?: T;
+  apiKey?: T;
+  apiKeyIndex?: T;
   email?: T;
   resetPasswordToken?: T;
   resetPasswordExpiration?: T;

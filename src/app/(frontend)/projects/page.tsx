@@ -50,7 +50,7 @@ export default async function Page() {
                   src={
                     project.meta?.image
                       ? project.meta.image.sizes.small.url
-                      : '/placeholder.jpg?height=300&width=400'
+                      : '/placeholder.jpg'
                   }
                   alt={project.title}
                   width={400}
